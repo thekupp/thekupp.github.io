@@ -1,169 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mustafa Yakup Kocabaş</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustafa Yakup Kocabaş | Portfolio</title>
+  <meta name="description" content="Mustafa Yakup Kocabaş Portfolio - Computer Engineering Student">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
-}
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-header {
-    text-align: center;
-    padding: 60px 20px;
-}
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Outfit','sans-serif'] },
+          colors: { primary:'#3b82f6', secondary:'#10b981', darker:'#020617', card:'#1e293b' }
+        }
+      }
+    }
+  </script>
 
-header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-header p {
-    color: #94a3b8;
-}
-
-nav {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-nav a {
-    color: #38bdf8;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-h2 {
-    border-bottom: 2px solid #38bdf8;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #94a3b8;
-}
-</style>
+  <style>
+    body { font-family: 'Outfit', sans-serif; }
+    .blob{position:absolute;filter:blur(40px);opacity:.4;z-index:-1}
+  </style>
 </head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darker dark:text-gray-100">
 
-<body>
-
-<header>
-    <h1>Mustafa Yakup Kocabaş</h1>
-    <p>Computer Engineering Student | Developer</p>
-    <p>Kayseri, Turkey</p>
-    <p>
-        📧 kocabasyakup9@gmail.com |
-        📱 +90 536 456 67 89
-    </p>
-</header>
-
-<nav>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#volunteer">Volunteer</a>
-    <a href="#skills">Skills</a>
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-white/80 dark:bg-darker/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <span class="text-xl font-bold">yakup</span>
+    <div class="space-x-6 hidden md:flex">
+      <a href="#home">Ana Sayfa</a>
+      <a href="#about">Hakkımda</a>
+      <a href="#projects">Projeler</a>
+      <a href="#contact">İletişim</a>
+    </div>
+  </div>
 </nav>
 
-<section id="education">
-    <h2>Education</h2>
-    <div class="card">
-        <h3>Erciyes University</h3>
-        <p>Bachelor of Computer Engineering (2022 - Present)</p>
-        <p><b>Relevant Courses:</b> Data Structures, OOP, Software Engineering, Database Systems, Computer Networks, Embedded Systems</p>
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center justify-center pt-20">
+  <div class="text-center max-w-2xl">
+    <h1 class="text-5xl font-bold mb-4">Mustafa Yakup Kocabaş</h1>
+    <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">Computer Engineering Student & Software Developer</p>
+    <p class="mb-6">Yazılım geliştirme, veri yapıları ve algoritmalar üzerine çalışıyorum. Mobil uygulamalar ve simülasyon sistemleri geliştiriyorum.</p>
+    <div class="flex justify-center gap-4">
+      <a href="#projects" class="px-6 py-3 bg-primary text-white rounded-lg">Projeler</a>
+      <a href="cv.pdf" class="px-6 py-3 border rounded-lg">CV İndir</a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github text-2xl"></i></a>
     </div>
+  </div>
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Recipe Recommendation Mobile App</h3>
-        <ul>
-            <li>Recommends recipes based on ingredients</li>
-            <li>Dynamic filtering system</li>
-            <li>User-friendly interface</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>Traffic Flow Optimization System</h3>
-        <ul>
-            <li>Traffic simulation and smart signals</li>
-            <li>Adaptive signal system</li>
-            <li>Reduced congestion</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>Veterinary Clinic Website</h3>
-        <ul>
-            <li>Service & appointment pages</li>
-            <li>Clean UI design</li>
-            <li>Improved accessibility</li>
-        </ul>
-    </div>
-
+<!-- ABOUT -->
+<section id="about" class="py-20 bg-white dark:bg-card/30">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Hakkımda</h2>
+    <p>Erciyes Üniversitesi Bilgisayar Mühendisliği öğrencisiyim (2022 - Devam). Yazılım geliştirme ve problem çözme üzerine kendimi geliştiriyorum.</p>
+  </div>
 </section>
 
-<section id="volunteer">
-    <h2>Volunteer Experience</h2>
-    <div class="card">
-        <h3>UAV / Drone Club Member</h3>
-        <ul>
-            <li>Participated in UAV workshops</li>
-            <li>Worked on drone simulations</li>
-            <li>Team collaboration experience</li>
-        </ul>
+<!-- PROJECTS -->
+<section id="projects" class="py-20">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Projeler</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="p-6 bg-white dark:bg-card rounded-xl">
+        <h3 class="font-bold mb-2">Recipe App</h3>
+        <p>Malzemeye göre tarif öneren mobil uygulama.</p>
+      </div>
+
+      <div class="p-6 bg-white dark:bg-card rounded-xl">
+        <h3 class="font-bold mb-2">Traffic System</h3>
+        <p>Akıllı trafik ışık sistemi simülasyonu.</p>
+      </div>
+
+      <div class="p-6 bg-white dark:bg-card rounded-xl">
+        <h3 class="font-bold mb-2">Veterinary Website</h3>
+        <p>Veteriner kliniği için web sitesi.</p>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-
-    <div class="card">
-        <h3>Technical Skills</h3>
-        <p>Python, Java, C, C#, Git, Linux, Windows</p>
-    </div>
-
-    <div class="card">
-        <h3>Soft Skills</h3>
-        <p>Teamwork, Communication, Leadership, Time Management</p>
-    </div>
-
-    <div class="card">
-        <h3>Languages</h3>
-        <p>Turkish (Native), English (B2)</p>
-    </div>
-
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-white dark:bg-card/30 text-center">
+  <h2 class="text-3xl font-bold mb-6">İletişim</h2>
+  <p class="mb-4">kocabasyakup9@gmail.com</p>
+  <a href="https://github.com/" class="text-primary">GitHub</a>
 </section>
 
-<footer>
-    <p>© 2026 Mustafa Yakup Kocabaş</p>
+<footer class="text-center py-6">
+  © 2026 Mustafa Yakup Kocabaş
 </footer>
 
 </body>
